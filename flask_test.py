@@ -35,13 +35,13 @@ class FlaskappTests(unittest.TestCase):
     def test_updusers_status_code(self):
         # sends HTTP PUT request to the application
         # on the specified path
-        result = self.app.put('/api/v1/users/33', data='{"username":"Tagning", "email": "leolaLguertin@teleworm.us"}', content_type='application/json')
+        result = self.app.put('/api/v1/users/148', data='{"username":"p4", "email": "leolaLguertin@teleworm.us"}', content_type='application/json')
         # assert the status code of the response
         self.assertEquals(result.status_code, 200)
     def test_addtweets_status_code(self):
         # sends HTTP GET request to the application
         # on the specified path
-        result = self.app.post('/api/v2/tweets', data='{"username":"Tagning", "body": "It Works!#Awesome"}', content_type='application/json')
+        result = self.app.post('/api/v2/tweets', data='{"username":"p4", "body": "It Works!#Awesome"}', content_type='application/json')
 
         # assert the status code of the response
         self.assertEqual(result.status_code, 201)
